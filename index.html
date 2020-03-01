@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <h1>A Cool Quiz</h1>
     <p class="time"></p>
+    <p class="highscores">View Highscores</p>
 
 
     <div class="jumbotron">
@@ -45,10 +45,29 @@
       <div class="cardThree" style="height: 10rem;">
         <div class="card-body">
           <p class="card-text">Question 3</p>
-          <button id="btn-3-1">A</button>
-          <button id="btn-3-2">B</button>
-          <button id="btn-3-3">C</button>
-          <button id="btn-3-4">D</button>
+          <button onclick="clear4()" id="btn-3-1">A</button>
+          <button onclick="clear4()" id="btn-3-2">B</button>
+          <button onclick="clear4()" id="btn-3-3">C</button>
+          <button onclick="clear4()" id="btn-3-4">D</button>
+        </div>
+      </div>
+
+      <div class="cardFour" style="width: 40rem;">
+        <div class="card-body">
+          <h5 class="card-title">Game Over!</h5>
+          <form>
+            <label for="fname">Enter initials:</label>
+            <input type="text">
+            <input type="submit" value="Submit">
+          </form> 
+        </div>
+      </div>
+
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Highscores</h5>
+          <button>Go Back</button>
+          <button>Clear Highscores</button>
         </div>
       </div>
 

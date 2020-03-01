@@ -4,6 +4,7 @@ var btn = document.querySelector("#btn");
 var cardOne = document.querySelector(".cardOne");
 var cardTwo = document.querySelector(".cardTwo");
 var cardThree = document.querySelector(".cardThree");
+var cardFour = document.querySelector(".cardFour");
 
 
 var remaining = 10; 
@@ -23,6 +24,7 @@ function demoDisplay() {
     cardOne.style.display = "none";
     cardTwo.style.display = "none";
     cardThree.style.display = "none";
+    cardFour.style.display = "none";
   }
 demoDisplay();
 
@@ -52,6 +54,13 @@ function clear3() {
     cardThree;
     cardTwo.parentNode.replaceChild(cardThree, cardTwo);
     cardThree.style.display = "block";
+};
+
+function clear4() {
+    cardThree;
+    cardFour;
+    cardThree.parentNode.replaceChild(cardFour, cardThree);
+    cardFour.style.display = "block";
 };
 
 
