@@ -4,11 +4,24 @@ var btn = document.querySelector("#btn");
 var cardOne = document.querySelector(".cardOne");
 var cardTwo = document.querySelector(".cardTwo");
 var cardThree = document.querySelector(".cardThree");
-var cardFour = document.querySelector(".cardFour");
-
+var gameOver = document.querySelector(".gameOver");
+var highscores = document.querySelector(".highscores");
+var b = document.querySelector(".btn-1-2");
+var d = document.querySelector(".btn-2-4");
+var a = document.querySelector(".btn-3-1");
+var scoreEl = document.querySelector("#score");
+var startGame = btn;
+var score = 0;
 
 var remaining = 10; 
-    
+
+
+startGame.addEventListener("click", clear);
+startGame.addEventListener("click", setTime);
+
+
+
+
 function setTime() {
     var interval = setInterval(function() {
         remaining--;
@@ -20,13 +33,29 @@ function setTime() {
     }, 1000);
 };
 
-function demoDisplay() {
-    cardOne.style.display = "none";
-    cardTwo.style.display = "none";
-    cardThree.style.display = "none";
-    cardFour.style.display = "none";
-  }
+function demoDisplay() { 
+    var cards = [cardOne, cardTwo, cardThree, gameOver, highscores];
+        for (i = 0; i < cards.length; i++) {
+            cards[i].style.display = "none";
+        }
+
+  };
 demoDisplay();
+
+function addScore() {
+    score += 5;
+    alert(score);
+};
+
+function rightAnswer() {
+    var rightA = [b, d, a];
+    for (var i = 0; i < rightA.length; i++) {
+        rightA[i].addEventListener("click", addScore);
+    }
+};
+rightAnswer();
+
+
 
 function clear() {
     clearDiv;
@@ -34,13 +63,6 @@ function clear() {
     clearDiv.parentNode.replaceChild(cardOne, clearDiv);
     cardOne.style.display = "block";
 };
-
-function start() {
-    var startGame = btn;
-    startGame.addEventListener("click", clear);
-    startGame.addEventListener("click", setTime);
-}
-start();
 
 function clear2() {
     cardOne;
@@ -58,10 +80,23 @@ function clear3() {
 
 function clear4() {
     cardThree;
-    cardFour;
-    cardThree.parentNode.replaceChild(cardFour, cardThree);
-    cardFour.style.display = "block";
+    gameOver;
+    cardThree.parentNode.replaceChild(gameOver, cardThree);
+    gameOver.style.display = "block";
 };
+
+function clear5() {
+    gameOver;
+    highscores;
+    gameOver.parentNode.replaceChild(highscores, gameOver);
+    highscores.style.display = "block";
+};
+
+function clear6() {
+    highscores;
+    clearDiv;
+    highscores.parentNode.replaceChild(clearDiv, highscores);
+}; 
 
 
 

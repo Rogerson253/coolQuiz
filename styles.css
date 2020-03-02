@@ -1,9 +1,14 @@
-h1, div {
+div {
     text-align: center;
 }
 
-.jumbotron {
-    margin-top: 30px;
+.jumbotron, .cardOne, .cardTwo, .cardThree {
+    margin-top: 10%;
+}
+
+.gameOver, .highscores {
+    margin: auto;
+    margin-top: 10%;
 }
 
 .time {
@@ -11,7 +16,7 @@ h1, div {
     font-weight: bold;
 }
 
-.highscores {
+.vHighscores {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +24,3 @@ h1, div {
     font-weight: bold;
 }
 
-.cardFour {
-    margin: auto;
-}

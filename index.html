@@ -12,7 +12,7 @@
 
 <body>
     <p class="time"></p>
-    <p class="highscores">View Highscores</p>
+    <p class="vHighscores">View Highscores</p>
 
 
     <div class="jumbotron">
@@ -45,28 +45,29 @@
       <div class="cardThree" style="height: 10rem;">
         <div class="card-body">
           <p class="card-text">Question 3</p>
-          <button onclick="clear4()" id="btn-3-1">A</button>
-          <button onclick="clear4()" id="btn-3-2">B</button>
-          <button onclick="clear4()" id="btn-3-3">C</button>
-          <button onclick="clear4()" id="btn-3-4">D</button>
+          <button onclick="clear4()" class="btn-3-1">A</button>
+          <button onclick="clear4()" class="btn-3-2">B</button>
+          <button onclick="clear4()" class="btn-3-3">C</button>
+          <button onclick="clear4()" class="btn-3-4">D</button>
         </div>
       </div>
 
-      <div class="cardFour" style="width: 40rem;">
+      <div class="gameOver" style="width: 40rem;">
         <div class="card-body">
           <h5 class="card-title">Game Over!</h5>
+          <p>Score: <span id="score">0</span></p>
           <form>
             <label for="fname">Enter initials:</label>
             <input type="text">
-            <input type="submit" value="Submit">
+            <button onclick="clear5()" class="submit">Submit</button>
           </form> 
         </div>
       </div>
 
-      <div class="card" style="width: 30rem;">
+      <div class="highscores" style="width: 30rem;">
         <div class="card-body">
           <h5 class="card-title">Highscores</h5>
-          <button>Go Back</button>
+          <button onclick="clear6()">Go Back</button>
           <button>Clear Highscores</button>
         </div>
       </div>
