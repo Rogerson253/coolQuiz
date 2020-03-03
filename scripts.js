@@ -9,11 +9,10 @@ var highscores = document.querySelector(".highscores");
 var b = document.querySelector(".btn-1-2");
 var d = document.querySelector(".btn-2-4");
 var a = document.querySelector(".btn-3-1");
-var scoreEl = document.querySelector("#score");
+var scoreEl = document.getElementById("score");
 var startGame = btn;
 var score = 0;
-
-var remaining = 10; 
+var remaining = 60; 
 
 
 startGame.addEventListener("click", clear);
@@ -44,8 +43,11 @@ demoDisplay();
 
 function addScore() {
     score += 5;
-    alert(score);
+    parseInt(score);
+    console.log(score);
+    scoreEl.textContent = "Your score is " + score;
 };
+
 
 function rightAnswer() {
     var rightA = [b, d, a];
